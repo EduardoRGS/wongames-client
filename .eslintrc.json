@@ -25,6 +25,7 @@
         "react-hooks/exhaustive-deps": "warn",
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
-        "@typescript-eslint/exclicit-module-boundary-types": "off"
+        "@typescript-eslint/exclicit-module-boundary-types": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
     }
 }
