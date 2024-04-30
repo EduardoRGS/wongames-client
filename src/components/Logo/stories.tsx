@@ -19,5 +19,6 @@ const LogoTemplate = (args: LogoProps) => <Logo {...args} />
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const Default = LogoTemplate.bind({}) as any
 Default.args = {
-  color: 'white'
+  color: 'white',
+  $hideOnMobile: false
 }
