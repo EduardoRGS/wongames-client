@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import Logo, { LogoProps } from '.'
 
 export default {
@@ -13,11 +13,8 @@ export default {
   }
 } as Meta
 
-const LogoTemplate = (args: LogoProps) => <Logo {...args} />
-
-// Usado any apenas para tirar o erro de tipagem do args
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const Default = LogoTemplate.bind({}) as any
+type Story = StoryObj<typeof Logo>
+export const Default: Story = (args: LogoProps) => <Logo {...args} />
 Default.args = {
   color: 'white',
   $hideOnMobile: false

@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import Heading, { HeadingProps } from '.'
 
 export default {
@@ -11,14 +11,11 @@ export default {
   }
 } as Meta
 
-const HeadingTemplate = (args: HeadingProps) => <Heading {...args} />
-
-// Usado any apenas para tirar o erro de tipagem do args
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const Default = HeadingTemplate.bind({}) as any
+type Story = StoryObj<typeof Heading>
+export const Default: Story = (args: HeadingProps) => <Heading {...args} />
 Default.args = {
   children: 'Most Populars',
   color: 'black',
-  lineLeft: true,
-  lineBottom: false
+  $lineLeft: true,
+  $lineBottom: false
 }
