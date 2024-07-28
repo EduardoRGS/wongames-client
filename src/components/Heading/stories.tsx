@@ -16,6 +16,8 @@ export const Default: Story = (args: HeadingProps) => <Heading {...args} />
 Default.args = {
   children: 'Most Populars',
   color: 'black',
+  lineColor: 'primary',
+  size: 'medium',
   $lineLeft: true,
   $lineBottom: false
 }
