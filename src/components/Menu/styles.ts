@@ -41,7 +41,9 @@ export const MenuGroup = styled.div`
 
 export const MenuNav = styled.div`
   ${({ theme }) => css`
-    margin-left: ${theme.spacings.small};
+    ${media.greaterThan('medium')`
+			margin-left: ${theme.spacings.small};
+		`}
   `}
 `
 
@@ -109,10 +111,10 @@ export const MenuFull = styled.nav<MenuFullProps>`
 
     ${MenuNav} {
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       flex: 1;
+      flex-direction: column;
     }
 
     ${MenuLink} {
