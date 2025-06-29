@@ -1,5 +1,7 @@
-import Main from '@/components/main'
+'use client'
+
+import HomePage from './templates/Home'
 
 export default function Home() {
-  return <Main />
+  return <HomePage />
 }
