@@ -1,18 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 import Highlight, { HighlightProps } from '.'
+import highlightMock from './mock'
 
 export default {
   title: 'Highlight',
   component: Highlight,
-  args: {
-    title: 'Read Dead is back!',
-    subtitle: "Come see John's new adventures",
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/rd2',
-    backgroundImage: '/img/rd2-background.png',
-    floatImage: '/img/rd2-img.png',
-    alignment: 'right'
-  }
+  args: { ...highlightMock }
 } as Meta
 
 export const Default: StoryObj = (args: HighlightProps) => (
@@ -21,12 +14,4 @@ export const Default: StoryObj = (args: HighlightProps) => (
   </div>
 )
 
-Default.args = {
-  title: 'Read Dead is back!',
-  subtitle: "Come see John's new adventures",
-  buttonLabel: 'Buy now',
-  buttonLink: '/games/rd2',
-  backgroundImage: '/img/rd2-background.png',
-  floatImage: '/img/rd2-img.png',
-  alignment: 'right'
-}
+Default.args = { ...highlightMock }
