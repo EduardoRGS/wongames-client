@@ -80,7 +80,7 @@ export const SectionFooter = styled.section`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.large};
     padding-bottom: ${theme.spacings.xsmall};
-    padding: ${theme.spacings.xxlarge};
+    padding-top: ${theme.spacings.xxlarge};
     clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0 100%);
     background-color: ${theme.colors.white};
 
