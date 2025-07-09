@@ -1,7 +1,7 @@
 import {
+  AddShoppingCart,
   Favorite,
-  FavoriteBorder,
-  ShoppingCart
+  FavoriteBorder
 } from 'styled-icons/material-outlined'
 import Image from 'next/image'
 import * as S from './styles'
@@ -57,9 +57,7 @@ const GameCard = ({
       <S.BuyBox>
         {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
         <S.Price>{promotionalPrice || price}</S.Price>
-        <Button size="small" icon={<ShoppingCart />}>
-          Buy now
-        </Button>
+        <Button size="small" icon={<AddShoppingCart />}></Button>
       </S.BuyBox>
     </S.Content>
   </S.Wrapper>
