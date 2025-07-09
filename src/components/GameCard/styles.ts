@@ -5,14 +5,15 @@ export const Wrapper = styled.article`
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: ${theme.colors.white};
   `}
 `
 
-export const ImageBox = styled.div`
-  height: 14rem;
+export const ImageBox = styled.a`
+  min-height: 14rem;
+  position: relative;
   width: 100%;
   background: #f6f7f8;
   background-image: linear-gradient(
@@ -25,16 +26,11 @@ export const ImageBox = styled.div`
   background-size: 80rem 14rem;
   animation: placeholderShimmer 1s linear infinite forwards;
 
-  image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   @keyframes placeholderShimmer {
     0% {
       background-position: -40rem 0;
     }
+
     100% {
       background-position: 40rem 0;
     }
@@ -52,23 +48,48 @@ export const Content = styled.div`
   `}
 `
 
-export const Info = styled.div`
+export const Info = styled.a`
   max-width: calc(100% - 2.5rem);
+  text-decoration: none;
 `
 
 export const Title = styled.h3`
   ${({ theme }) => css`
-    color: ${theme.colors.black};
     font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.bold};
     line-height: ${theme.font.sizes.medium};
+    font-weight: ${theme.font.bold};
+    color: ${theme.colors.black};
   `}
 `
+
 export const Developer = styled.h4`
   ${({ theme }) => css`
-    color: ${theme.colors.gray};
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.bold};
+    color: ${theme.colors.gray};
+  `}
+`
+
+export const FavButton = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
+    position: absolute;
+    right: -1rem;
+    top: -0.5rem;
+    cursor: pointer;
+
+    svg {
+      width: 2.5rem;
+    }
+  `}
+`
+
+export const BuyBox = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: ${theme.spacings.xxsmall};
   `}
 `
 
@@ -99,26 +120,7 @@ export const Price = styled.div<PriceProps>`
     height: 3rem;
     align-items: center;
 
-    ${!isPromotional && priceModifiers.default(theme)}
-    ${isPromotional && priceModifiers.promotional(theme)}
-  `}
-`
-export const BuyBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: ${({ theme }) => theme.spacings.xxsmall};
-`
-export const FavButton = styled.div`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    top: -0.5rem;
-
-    svg {
-      width: 2.5rem;
-    }
+    ${!isPromotional && priceModifiers.default(theme)};
+    ${isPromotional && priceModifiers.promotional(theme)};
   `}
 `

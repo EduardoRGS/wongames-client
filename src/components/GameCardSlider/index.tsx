@@ -10,8 +10,6 @@ export type GameCardSliderProps = {
 
 const settings: SliderSettings = {
   arrows: true,
-  nextArrow: <ArrowRight aria-label="next games" />,
-  prevArrow: <ArrowLeft aria-label="previous games" />,
   slidesToShow: 4,
   infinite: false,
   lazyLoad: 'ondemand',
@@ -43,7 +41,9 @@ const settings: SliderSettings = {
         slidesToShow: 1.1
       }
     }
-  ]
+  ],
+  nextArrow: <ArrowRight aria-label="next games" />,
+  prevArrow: <ArrowLeft aria-label="previous games" />
 }
 
 const GameCardSlider = ({ items, color = 'white' }: GameCardSliderProps) => (

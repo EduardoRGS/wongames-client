@@ -7,11 +7,11 @@ type WrapperProps = Pick<GameCardSliderProps, 'color'>
 export const Wrapper = styled.section<WrapperProps>`
   ${({ theme, color }) => css`
     ${media.lessThan('huge')`
-            overflow-x: hidden;
-        `}
+        overflow-x: hidden;
+    `}
 
     .slick-track,
-        .slick-list {
+    .slick-list {
       display: flex;
     }
 
@@ -26,17 +26,17 @@ export const Wrapper = styled.section<WrapperProps>`
     }
 
     ${media.greaterThan('large')`
-            .slick-slide > div {
-                margin: 0 ${theme.spacings.xsmall};
-            }
+      .slick-slide > div {
+         margin: 0 ${theme.spacings.xsmall};
+      }
 
-            .slick-list {
-                margin: 0 -${theme.spacings.xsmall};
-            }
-        `}
+     .slick-list {
+        margin: 0 -${theme.spacings.xsmall};
+      }
+    `}
 
     .slick-prev,
-        .slick-next {
+    .slick-next {
       display: block;
       color: ${theme.colors[color!]};
       cursor: pointer;

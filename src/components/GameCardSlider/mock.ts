@@ -35,7 +35,7 @@ const gameCardSliderMock = [
     title: 'Population Zero',
     slug: 'population-zero',
     developer: 'Rockstar Games',
-    image: '/img/rd2-background.png',
+    image: '/img/rd2-img.png',
     price: 'R$ 220,00',
     promotionalPrice: 'R$ 170,00'
   },

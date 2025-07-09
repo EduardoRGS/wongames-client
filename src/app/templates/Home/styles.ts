@@ -14,15 +14,15 @@ const Sections = styled.section`
     }
 
     ${HighlightStyles.Wrapper} {
-      ${media.greaterThan('medium')`
-        margin-right: calc(${theme.grid.gutter} / 2);
-        margin-left: calc(${theme.grid.gutter} / 2);
+      ${media.lessThan('medium')`
+        margin-right: calc(-${theme.grid.gutter} / 2);
+        margin-left: calc(-${theme.grid.gutter} / 2);
       `}
     }
 
     ${GameCardSliderStyles.Wrapper} {
-      ${media.greaterThan('large')`
-        margin-right: calc(${theme.grid.gutter} / 2);
+      ${media.lessThan('huge')`
+        margin-right: calc(-${theme.grid.gutter} / 2);
       `}
     }
 
@@ -46,11 +46,9 @@ export const SectionNews = styled(Sections)`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.xxlarge} * 2);
 
-
     ${media.greaterThan('large')`
       margin-top: -13rem;
     `}
-
 
     ${media.greaterThan('medium')`
       margin-bottom: 0;
@@ -62,7 +60,7 @@ export const SectionNews = styled(Sections)`
       ${HeadingStyles.Wrapper} {
         color: ${theme.colors.black};
       }
-    ` }
+    `}
   `}
 `
 
@@ -81,9 +79,9 @@ export const SectionFreeGames = styled(Sections)``
 export const SectionFooter = styled.section`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.large};
-    padding-bottom: ${theme.spacings.medium};
-    padding-top: ${theme.spacings.large};
-    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+    padding-bottom: ${theme.spacings.xsmall};
+    padding: ${theme.spacings.xxlarge};
+    clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0 100%);
     background-color: ${theme.colors.white};
 
     ${media.greaterThan('medium')`
